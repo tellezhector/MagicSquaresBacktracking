@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MagicSquareBacktracking/Program.cs">
+    <Files>
+      <File FileName="MagicSquareBacktracking/Program.cs" Line="22" Column="48" />
+      <File FileName="MagicSquareBacktracking/Properties/MagicGroups.cs" Line="67" Column="1" />
+      <File FileName="MagicSquareBacktracking/Properties/Extensions.cs" Line="11" Column="39" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="MagicSquareBacktracking/Program.cs" line="37" offsetX="528" offsetY="576" expression="step" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
