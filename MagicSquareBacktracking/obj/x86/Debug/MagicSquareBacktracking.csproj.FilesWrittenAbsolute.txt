@@ -1,5 +1,0 @@
-/home/htellez/Projects/MagicSquareBacktracking/MagicSquareBacktracking/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
-/home/htellez/Projects/MagicSquareBacktracking/MagicSquareBacktracking/bin/Debug/MagicSquareBacktracking.exe.mdb
-/home/htellez/Projects/MagicSquareBacktracking/MagicSquareBacktracking/bin/Debug/MagicSquareBacktracking.exe
-/home/htellez/Projects/MagicSquareBacktracking/MagicSquareBacktracking/obj/x86/Debug/MagicSquareBacktracking.exe
-/home/htellez/Projects/MagicSquareBacktracking/MagicSquareBacktracking/obj/x86/Debug/MagicSquareBacktracking.exe.mdb
