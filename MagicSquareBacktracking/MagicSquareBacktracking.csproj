@@ -36,6 +36,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="MagicGroups.cs" />
+    <Compile Include="PermutationsGenerator.cs" />
+    <Compile Include="MagicSquares.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

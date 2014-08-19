@@ -2,9 +2,11 @@
 using System.Threading;
 using System.Text;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MagicSquareBacktracking
 {
+
 	class MainClass
 	{
 		public static int globalCounter = 0;
@@ -12,26 +14,15 @@ namespace MagicSquareBacktracking
 		public static void Main (string[] args)
 		{
 			MagicGroups m = new MagicGroups (4);
-			foreach (List<int> g in m.ListOfMagicGroups) {
-				foreach (int i in g) {
-					Console.Write (i);
-					Console.Write ("   ");
-				}
-				Console.WriteLine ();
-			}
-			Console.WriteLine (m.ListOfMagicGroups.Count);
-			/*
-			Console.WriteLine ("Looking for squares!");
-			int size = 3;
-			if (args.Length > 0) {
-				int.TryParse (args[0], out size);
+			List<int> list = m.ListOfMagicGroups.First ();
+
+			List<int[]> permutations = PermutationsGenerator.Permutations(list.ToArray());
+
+			foreach (var p in permutations) {
+				Console.WriteLine (string.Join (",", p));
 			}
 
-			var o = new int[size, size];
-			Backtracking (0, o);
-			Console.WriteLine ("{0} results found", globalCounter);
-			Console.WriteLine ("Press [Enter] to exit.");
-			Console.ReadLine ();*/
+			Console.WriteLine("{0} permutations", permutations.Count);
 		}
 
 		public static void Backtracking(int step, int[,] option)
