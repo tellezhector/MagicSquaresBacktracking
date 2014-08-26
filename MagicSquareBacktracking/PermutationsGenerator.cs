@@ -8,20 +8,31 @@ namespace MagicSquareBacktracking
 {
 	public class PermutationsGenerator
 	{
-		public static List<int[]> Permutations(int[] numbers)
+		public static List<T[]> Permutations<T>(IEnumerable<T> numbers)
 		{
-			if (numbers.Length == 1)
+			if (numbers.Count() == 1)
 			{
-				return new List<int[]>{ numbers };
+				return new List<T[]>{ numbers.ToArray() };
 			}
 
-			List<int[]> result = new List<int[]> ();
+			List<T[]> result = new List<T[]> ();
 
-			foreach (int i in numbers) {
-				var rest = ((int[])numbers.Clone ()).Where(n => n != i).ToArray();
-				var perms = Permutations(rest);
-				foreach (var p in perms) {
-					var res = new List<int>{i};
+			for (int i = 0; i < numbers.Count (); i++)
+			{
+				List<T> rest = new List<T>();
+				for (int j = 0; j < numbers.Count (); j++)
+				{
+					if (i == j)
+					{
+						continue;
+					}
+
+					rest.Add (numbers.ElementAt(j));
+				}
+
+				List<T[]> subPerms = Permutations (rest);
+				foreach (var p in subPerms) {
+					var res = new List<T>{numbers.ElementAt(i)};
 					res.AddRange(p);
 					result.Add (res.ToArray ());
 				}

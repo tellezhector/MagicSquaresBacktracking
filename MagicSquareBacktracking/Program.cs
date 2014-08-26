@@ -13,16 +13,15 @@ namespace MagicSquareBacktracking
 
 		public static void Main (string[] args)
 		{
-			MagicGroups m = new MagicGroups (4);
-			List<int> list = m.ListOfMagicGroups.First ();
-
-			List<int[]> permutations = PermutationsGenerator.Permutations(list.ToArray());
-
-			foreach (var p in permutations) {
-				Console.WriteLine (string.Join (",", p));
+			int i = 3;
+			if (args.Length > 0)
+			{
+				i = int.Parse (args [0]);
 			}
 
-			Console.WriteLine("{0} permutations", permutations.Count);
+			MagicSquares ms = new MagicSquares(i);
+			ms.PrintMagicSquares();
+			Console.WriteLine ("{0} magic squares found", ms.Counter);
 		}
 
 		public static void Backtracking(int step, int[,] option)
